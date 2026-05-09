@@ -4,7 +4,11 @@ import numpy as np
 
 # Load saved model
 loaded_model = pickle.load(open('Trained_model.sav', 'rb'))
+with open('Trained_model.sav', 'rb') as file:
+    loaded_model = pickle.load(file)
 
+with open('scaler.sav', 'rb') as file:
+    scaler = pickle.load(file)
 # App title
 st.title('Diabetes Prediction System')
 
